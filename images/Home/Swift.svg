@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="53px" viewBox="0 0 59 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Swift-dark</title>
+    <defs>
+        <path d="M140.35091,56 C166.285119,73.7387755 157.896447,93.3008746 157.896447,93.3008746 C157.896447,93.3008746 165.271103,101.675802 162.290513,109 C162.290513,109 159.248467,103.869971 154.147663,103.869971 C149.231226,103.869971 146.342819,109 136.448488,109 C114.416702,109 104,90.4886297 104,90.4886297 C123.850117,103.622741 137.401048,94.3206997 137.401048,94.3206997 C128.459277,89.0979592 109.438809,64.1276968 109.438809,64.1276968 C126.001058,78.3125364 133.16062,82.051895 133.16062,82.051895 C128.889465,78.4979592 116.905649,61.1300292 116.905649,61.1300292 C126.492702,70.8956268 145.543898,84.5241983 145.543898,84.5241983 C150.951979,69.4431487 140.35091,56 140.35091,56 Z" id="path-1"></path>
+        <filter x="-2.5%" y="-2.8%" width="105.1%" height="105.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="-2" dy="-2" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.185972794   0 0 0 0 0.185972794   0 0 0 0 0.185972794  0 0 0 0.183583506 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-104.000000, -56.000000)" fill-rule="nonzero">
+            <g id="Swift-dark">
+                <use fill="#2E2E2E" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

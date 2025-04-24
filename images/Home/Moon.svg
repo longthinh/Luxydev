@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>moon</title>
+    <defs>
+        <path d="M74.307045,38.8888889 C80.6408251,38.8888889 86.1613792,35.0777778 88.0224158,30.24 C88.1631665,29.8822222 88.1944444,29.5244444 88.1944444,29.3688889 C88.1944444,28.8088889 87.7565535,28.4511111 87.3186625,28.4511111 C87.099717,28.4511111 86.9120494,28.4822222 86.6149091,28.5911111 C85.4889038,28.9644444 83.6591451,29.3533333 81.8606643,29.3533333 C73.9160709,29.3533333 68.8490468,24.4222222 68.8490468,16.5355556 C68.8490468,14.8711111 69.2400209,12.5533333 69.7717456,11.3244444 C69.9281352,10.9822222 69.9594132,10.7488889 69.9594132,10.5933333 C69.9594132,10.1733333 69.6466339,9.72222222 69.0679923,9.72222222 C68.8803247,9.72222222 68.5206285,9.76888889 68.1765713,9.89333333 C62.7029342,12.0711111 59.0277778,17.9044444 59.0277778,24.0644444 C59.0277778,32.6977778 65.6430593,38.8888889 74.307045,38.8888889 Z" id="path-1"></path>
+        <filter x="-5.1%" y="-5.1%" width="110.3%" height="110.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="-1" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.871253857   0 0 0 0 0.786254963   0 0 0 0 0.276261599  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.316268257   0 0 0 0 0.284620447   0 0 0 0 0.0947335824  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(-1377.000000, -36.000000)" fill-rule="nonzero">
+            <g id="moon" transform="translate(1318.000000, 27.000000)">
+                <use fill="#DBC648" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

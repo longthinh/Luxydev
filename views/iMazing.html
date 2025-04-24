@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iMazing | Luxydev</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" type="image/png" href="../images/Home/favicon.png" />
+  </head>
+  <body class="dark-mode">
+    <img
+      id="mode-icon"
+      src="../images/Home/Night.png"
+      alt="Toggle Mode"
+      onclick="toggleDarkMode()"
+    />
+    <img
+      id="home-icon"
+      src="../images/Home/Home.png"
+      alt="Home"
+      onclick="window.location.href='../Index.html'"
+    />
+
+    <!-- <div class="centered">
+      <div class="content">
+        <img src="../images/Heart.png" alt="Coming Soon" class="coming-img" />
+        <h2>Coming Soon...</h2>
+      </div>
+    </div>
+
+    <style>
+      .centered {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .coming-img {
+        max-width: 256px;
+        margin-bottom: 1px;
+        border: none;
+      }
+    </style> -->
+    <h1>Download IPA Files Removed From Purchased Tab</h1>
+    <p>
+      Due to unknown reasons, apps you had previously purchased can no longer be
+      downloaded from the App Store or iTunes. However, it turns out these
+      applications can still be accessed using iMazing's app downloading
+      feature. This is because iMazing downloads apps using a different endpoint
+      from what iTunes uses.
+    </p>
+
+    <p>
+      <strong>This app must be purchased on your Apple ID</strong>. You cannot
+      just download any app ever made. Apple only lets you download apps you had
+      bought or downloaded in the past.
+    </p>
+
+    <h3>Requirements for this tutorial:</h3>
+    <ul>
+      <li>
+        <a href="https://imazing.com/download">iMazing</a> (Windows or Mac)
+      </li>
+      <li>
+        Plist editor (<a href="https://github.com/corpnewt/ProperTree"
+          >ProperTree</a
+        >
+        is free and cross platform, requires Python)
+      </li>
+      <li>
+        Any iOS Device (iMazing requires an iOS device to access the application
+        manager)
+      </li>
+      <li>
+        Lightning (or 30-pin connector) to connect the iOS device to your
+        computer
+      </li>
+      <li>
+        App ID (Number such as 1053533457) of app to download
+        <ul>
+          <li>
+            <strong
+              >The app you would like to download must have been previously
+              purchased on your Apple ID</strong
+            >
+          </li>
+          <li>You must be able to access the Apple ID</li>
+        </ul>
+      </li>
+      <li>Any app installed on the iOS device.</li>
+    </ul>
+
+    <h3>Finding the App ID</h3>
+    <p>
+      The easiest place to find an App ID is to find the original iTunes link.
+    </p>
+    <p>
+      <code>https://apps.apple.com/us/app/color-switch/id1053533457</code> (The
+      number after <code>/id</code> is the App ID).
+    </p>
+    <ul>
+      <li>
+        Search engines such as Google often still have the app's iTunes page as
+        a result
+      </li>
+      <li>
+        News articles and Review sites can have a link to view the iTunes page
+      </li>
+      <li>
+        Reveal trailers and promotional media will contain a link to the iTunes
+        page
+      </li>
+    </ul>
+    <p>
+      You may also
+      <a href="https://support.apple.com/en-ca/HT208502"
+        >request your personal data from Apple</a
+      >
+      to find the ID.
+    </p>
+    <ul>
+      <li>
+        Make sure to select "Apple Media Services information" when requesting
+        data
+      </li>
+      <li>This can take about a week to get</li>
+      <li>
+        Find it in
+        <code
+          >Apple_Media_Services/Stores Activity/Account and Transaction
+          History/Store Transaction History.csv</code
+        >
+        or <code>Store Free Transaction History.csv</code>
+        <ul>
+          <li>The App ID is listed as an "Item Reference Number"</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Downloading the app:</h3>
+    <ol>
+      <li>Plug your device into your computer</li>
+      <li>
+        Open iMazing. When prompted to back up your device, select 'Later'
+      </li>
+      <li>Select "Manage Apps"</li>
+      <img
+        src="https://user-images.githubusercontent.com/19511875/188524950-221ce021-ea0f-45a2-8cf0-b9df961b0ebf.png"
+        alt="step1"
+      />
+      <li>If prompted, sign into your Apple ID</li>
+      <img
+        src="https://user-images.githubusercontent.com/19511875/188524955-a7264aa9-3955-406e-a787-c0a22bb353dd.png"
+        alt="step3"
+      />
+      <li>
+        After a moment, a list of applications installed on your iOS device will
+        appear. Make sure the app you want to replace has a gray checkmark
+        <ul>
+          <li>Select the Library tab</li>
+          <li>
+            If it has a green checkmark, right click and "Delete from Library"
+          </li>
+          <li>
+            Check if the app you would like to install is already listed. If so,
+            download it and skip to step 12
+          </li>
+        </ul>
+        <img
+          src="https://user-images.githubusercontent.com/19511875/188524957-565d1b72-288d-4ced-85fd-8b577dbc2de7.png"
+          alt="step4"
+        />
+      </li>
+      <li>Close iMazing. Make sure iMazing Mini is also closed.</li>
+      <li>
+        Open <code>Apps.plist</code> in your .plist editor of choice.
+        <ul>
+          <li>
+            If using Propertree, double click the .bat (Windows) or .command
+            (Mac) file, and select File > Open in the Menu Bar
+          </li>
+          <li>
+            On Windows, paste <code>%appdata%\iMazing\Library</code> into the
+            location bar
+          </li>
+          <li>
+            On Mac, hold Command+Shift+G, and paste
+            <code>~/Library/Application Support/iMazing/Library</code>
+          </li>
+          <li>(Optional) Delete <code>Apps.plist.backup</code></li>
+        </ul>
+        <img
+          src="https://user-images.githubusercontent.com/19511875/188524958-bea534f5-0dda-415d-be32-9be13c47caad.png"
+          alt="step5"
+        />
+      </li>
+      <li>
+        Pick the app to replace (e.g. <code>com.adobe.Adobe-Reader</code>).
+        Modify:
+        <ul>
+          <li>storeID (Replace with App ID)</li>
+          <li>
+            The name of the Dictionary (Optional, change it to something
+            different)
+          </li>
+          <li>bundleID (Optional, change it to something different)</li>
+        </ul>
+        <img
+          src="https://user-images.githubusercontent.com/19511875/188524960-5723ba11-dbc5-4d99-b98e-90f46b4cda92.png"
+          alt="step6"
+        />
+      </li>
+      <li>
+        Save the .plist and close. Re-open iMazing and re-enter "Manage Apps"
+      </li>
+      <li>
+        The app you replaced should sync back, and a duplicate should appear.
+        Download this duplicate.
+        <img
+          src="https://user-images.githubusercontent.com/19511875/188524962-5d713583-5dca-4c82-837d-30ea0cb12b8d.png"
+          alt="step7"
+        />
+      </li>
+      <li>
+        After the duplicate is downloaded, exit the app manager and re-enter it.
+        <ul>
+          <li>
+            On older versions of iMazing, the download will fail. This is only
+            visual, the download actually did take place in the background.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Your app should now appear, but it is missing important information.
+        Click the trash can to delete it, and click the download button again.
+        <img
+          src="https://user-images.githubusercontent.com/19511875/188524963-05bd5ea7-a321-4d8c-8d34-5f17aaf5ae3e.png"
+          alt="step8"
+        />
+      </li>
+      <li>
+        You have now downloaded the delisted app. Right click and "Export .IPA"
+        to save it to your desktop
+        <img
+          src="https://user-images.githubusercontent.com/19511875/188524966-ced9ff49-8859-445d-a3e4-5faccf326868.png"
+          alt="step9"
+        />
+      </li>
+    </ol>
+
+    <h3>What to do with the .ipa file</h3>
+    <p>
+      The .ipa file on your desktop is an "encrypted" .ipa file. Like any other
+      app downloaded from iTunes, it will only be usable on devices with your
+      Apple ID. You may also choose to "decrypt" (or "crack") the app to remove
+      this restriction and make it easier to archive.
+    </p>
+    <p>
+      Use
+      <a
+        href="https://www.reddit.com/r/LegacyJailbreak/wiki/guides/crackingapps/"
+        >this</a
+      >
+      tutorial to crack the app on any legacy version of iOS.
+    </p>
+    <p>
+      Feel free to check out iOS preservation projects such as
+      <a href="https://discord.gg/rTJ9zxjMu3">iPhoneOS Obscura</a> if you would
+      like to archive old iOS apps.
+    </p>
+
+    <h3>About this tutorial</h3>
+    <p>
+      This tutorial was tested on OS X El Capitan and Windows 10 with iMazing
+      2.15.8.
+    </p>
+
+    <script src="../js/global.js"></script>
+  </body>
+</html>

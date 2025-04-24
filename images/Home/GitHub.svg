@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="40px" viewBox="0 0 42 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Github</title>
+    <defs>
+        <path d="M9,41.5067736 C9,50.5667644 14.8892402,58.2520838 23.0574535,60.9636608 C24.0858938,61.1524893 24.4606751,60.5192845 24.4606751,59.9754584 C24.4606751,59.4895398 24.4430086,58.1992118 24.4329135,56.4884257 C18.7152904,57.7271406 17.5089236,53.7390829 17.5089236,53.7390829 C16.5738632,51.3699149 15.2261648,50.7392277 15.2261648,50.7392277 C13.3598296,49.4677826 15.3674964,49.4929597 15.3674964,49.4929597 C17.4306864,49.6377282 18.5159117,51.6065799 18.5159117,51.6065799 C20.3494378,54.7398739 23.3274979,53.834756 24.4985318,53.3098129 C24.6852915,51.9854957 25.2165471,51.0816367 25.8033259,50.5692821 C21.2390702,50.051892 16.4401029,48.2920105 16.4401029,40.4342278 C16.4401029,38.1959808 17.2414029,36.3643445 18.5562922,34.9317657 C18.3442947,34.4131168 17.6388983,32.3271915 18.7581946,29.504835 C18.7581946,29.504835 20.4831981,28.9534558 24.4101995,31.6071255 C26.0493945,31.1514194 27.808469,30.9248252 29.5561865,30.9160132 C31.3026421,30.9248252 33.0604548,31.1514194 34.7021735,31.6071255 C38.6266511,28.9534558 40.3491308,29.504835 40.3491308,29.504835 C41.470951,32.3271915 40.7655545,34.4131168 40.5548189,34.9317657 C41.8722319,36.3643445 42.6672226,38.1959808 42.6672226,40.4342278 C42.6672226,48.3121522 37.8606839,50.0455978 33.2825474,50.552917 C34.0194911,51.1861218 34.6769357,52.4374252 34.6769357,54.3508872 C34.6769357,57.091418 34.6516979,59.303229 34.6516979,59.9754584 C34.6516979,60.5243199 35.0226936,61.1625602 36.0650146,60.962402 C44.2269185,58.2445306 50.1111111,50.5642467 50.1111111,41.5067736 C50.1111111,30.180841 40.9068862,21 29.5536627,21 C18.2042249,21 9,30.180841 9,41.5067736 Z" id="path-1"></path>
+        <filter x="-4.9%" y="-5.0%" width="109.7%" height="110.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.452083739   0 0 0 0 0.181981168   0 0 0 0 0.564280192  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="-1" dy="-1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0563380371   0 0 0 0 0.0300554132   0 0 0 0 0.0672554348  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-495.000000, -914.000000)">
+            <g id="Github" transform="translate(486.000000, 893.000000)">
+                <use fill="#6D2C88" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

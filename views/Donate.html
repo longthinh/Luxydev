@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | Luxydev</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" type="image/png" href="../images/Home/favicon.png" />
+  </head>
+  <body class="dark-mode">
+    <img
+      id="mode-icon"
+      src="../images/Home/Night.png"
+      alt="Toggle Mode"
+      onclick="toggleDarkMode()"
+    />
+    <img
+      id="home-icon"
+      src="../images/Home/Home.png"
+      alt="Home"
+      onclick="window.location.href='../Index.html'"
+    />
+
+    <div class="centered">
+      <div class="content">
+        <img
+          src="../images/Home/Donate.png"
+          alt="Coming Soon"
+          class="coming-img"
+        />
+        <p>
+          Trong lúc chúng ta đang hạnh phúc với những gì mình đang có.<br />Thì
+          ngoài kia, nhiều người chưa có gì để ăn, chưa có một chỗ nằm êm ái để
+          ngủ.<br /><br /><i
+            >Tội nghiệp những người nghèo, bởi vì họ quá nghèo!</i
+          >
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            width: 240px;
+            height: 120px;
+            object-fit: contain;
+          "
+        >
+          <a
+            href="../views/Transfer.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../images/Home/TPBank.png" alt="TPBank" />
+          </a>
+          <a
+            href="https://paypal.me/longthinhdev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="../images/Home/PayPal.png" alt="PayPal" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .centered {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .coming-img {
+        max-width: 256px; /* hoặc điều chỉnh theo nhu cầu */
+        margin-bottom: 1px;
+        border: none;
+      }
+    </style>
+
+    <script src="../js/global.js"></script>
+  </body>
+</html>

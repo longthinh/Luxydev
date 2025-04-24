@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiddler Classic | Luxydev</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="icon" type="image/png" href="../images/Home/favicon.png" />
+  </head>
+  <body class="dark-mode">
+    <img
+      id="mode-icon"
+      src="../images/Home/Night.png"
+      alt="Toggle Mode"
+      onclick="toggleDarkMode()"
+    />
+    <img
+      id="home-icon"
+      src="../images/Home/Home.png"
+      alt="Home"
+      onclick="window.location.href='../Index.html'"
+    />
+
+    <h2>Điều kiện bắt buộc</h2>
+    <ul>
+      <li>Đã từng tải ứng dụng</li>
+      <li>
+        Ứng dụng có trên App Store hoặc vẫn còn trong mục "Đã mua" nếu đã bị gỡ
+      </li>
+      <li>Tìm được appVerId</li>
+      <li>Sử dụng trên Windows</li>
+    </ul>
+
+    <h2>Phần mềm cần thiết</h2>
+    <style>
+      .download-link {
+        color: #2f57f5; /* Màu xanh mặc định */
+        transition: color 0.3s ease, text-shadow 0.3s ease,
+          text-decoration 0.3s ease;
+        text-decoration: none; /* Bỏ gạch chân mặc định */
+      }
+
+      .download-link:hover {
+        color: #4f76ff; /* Màu xanh sáng hơn khi hover */
+        text-shadow: 0 0 8px #2f57f5, 0 0 16px #2f57f5; /* Hiệu ứng sáng nhẹ */
+        text-decoration: none; /* Đảm bảo không có gạch chân khi hover */
+      }
+    </style>
+
+    <ul>
+      <li>
+        Tải về
+        <a href="https://www.telerik.com/download/fiddler" class="download-link"
+          >Fiddler Classic</a
+        >
+      </li>
+      <li>
+        Tải về
+        <a
+          href="https://secure-appldnld.apple.com/itunes12/091-87819-20180912-69177170-B085-11E8-B6AB-C1D03409AD2A6/iTunes64Setup.exe"
+          class="download-link"
+          >iTunes 12.6.5.3</a
+        >
+      </li>
+      <li>Công cụ giải nén WinRAR</li>
+    </ul>
+
+    <h2>Cài đặt Fiddler Classic</h2>
+    <ul>
+      <li>
+        Mở Fiddler Classic và Nhấn "No" nếu hỏi cập nhật
+        <br />
+        <img src="../images/Mockup/img1.png" alt="Bước 2" />
+      </li>
+      <br />
+      <li>
+        Chọn Tools > Options.. > chọn thẻ HTTPS<br />
+        <img src="../images/Mockup/img2.png" alt="Bước 2" />
+      </li>
+      <br />
+      <li>
+        Decrypt HTTPS traffic > Chọn "No" nếu hộp thoại hiện lên và chọn Actions
+        > Export Root Certificate to Desktop<br />
+        <img src="../images/Mockup/img3.png" alt="Bước 2" />
+      </li>
+      <br />
+      <li>
+        Nhấp vào FiddlerRoot.cer trên Desktop để cài đặt và chọn Install
+        Certificate...<br />
+        <img src="../images/Mockup/img4.png" alt="Bước 2" /><br />
+        <img src="../images/Mockup/img5.png" alt="Bước 2" /><br />
+        <img src="../images/Mockup/img6.png" alt="Bước 2" />
+      </li>
+      <br />
+      <li>
+        Chọn Trusted Root Certification Authorities > Finish<br />
+        <img src="../images/Mockup/img7.png" alt="Bước 2" />
+      </li>
+    </ul>
+
+    <h2>Tìm appVerId</h2>
+    <ul>
+      <li>
+        Mở iTunes > Đăng nhập > Đã mua >
+        <strong>Tải ứng dụng cần hạ cấp</strong>
+      </li>
+      <li>Đổi định dạng ứng dụng thành .zip và giải nén</li>
+      <li>Mở tệp iTunesMetadata.plist bằng Notepad hoặc Visual Studio Code</li>
+      <img src="../images/Mockup/img8.png" alt="Bước 3" />
+      <br />
+      <li>Tìm mảng chứa dãy số nguyên chính là appVerId của ứng dụng</li>
+    </ul>
+
+    <h2>Tải phiên bản cần hạ cấp</h2>
+    <ul>
+      <li>
+        Nhập <strong>bpu MZBuy</strong> vào Fiddler Classic > Enter<br />
+        <img src="../images/Mockup/img9.png" alt="Bước 4" />
+      </li>
+      <br />
+      <li>
+        Tải lại ứng dụng cần hạ cấp và chọn
+        <strong>p23-buy.itunes.app..</strong><br />
+        <img src="../images/Mockup/img10.png" alt="Bước 4" />
+      </li>
+      <br />
+      <li>
+        Chọn TextView > dán appVerId vào vị trí bôi đen > Run to Completion
+      </li>
+      <li>
+        iTunes sẽ tự tải phiên bản ứng dụng tương ứng với appVerId đã dán vào
+      </li>
+    </ul>
+    <h2>Lưu ý</h2>
+    <ul>
+      <li>Sao lưu lại tệp ipa của ứng dụng ở một nơi an toàn sau khi tải về</li>
+    </ul>
+
+    <script src="../js/global.js"></script>
+  </body>
+</html>

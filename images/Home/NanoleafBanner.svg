@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="367px" height="328px" viewBox="0 0 367 328" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Nanoleaf-Info-dark</title>
+    <defs>
+        <path d="M88.5737161,225.057504 L170.081694,225.075812 L171.294773,227.176926 L130.564733,297.723426 L128.116576,297.73558 L87.3681372,227.145628 L88.5737161,225.057504 Z M43.3737707,151.691311 L84.1038112,222.237811 L82.8902583,224.364053 L1.3833477,224.358261 L0.177768805,222.270137 L40.9476125,151.691311 L43.3737707,151.691311 Z M130.45582,151.691311 L171.18586,222.237811 L169.972307,224.364053 L88.4653968,224.358261 L87.2598179,222.270137 L128.029662,151.691311 L130.45582,151.691311 Z M217.537869,151.691311 L258.267909,222.237811 L257.054356,224.364053 L175.547446,224.358261 L174.341867,222.270137 L215.111711,151.691311 L217.537869,151.691311 Z M132.005766,149.246028 L213.512677,149.25182 L214.718256,151.339944 L173.948412,221.91877 L171.522254,221.91877 L130.792213,151.372271 L132.005766,149.246028 Z M45.0326915,149.238869 L126.54067,149.257177 L127.753749,151.358291 L87.0237084,221.904791 L84.5755519,221.916944 L43.8271126,151.326993 L45.0326915,149.238869 Z M173.996844,75.8456557 L214.726885,146.392155 L213.513332,148.518398 L132.006421,148.512606 L130.800842,146.424482 L171.570686,75.8456557 L173.996844,75.8456557 Z M175.546791,73.4003726 L257.053701,73.4061646 L258.25928,75.4942885 L217.489436,146.073115 L215.063278,146.073115 L174.333238,75.5266151 L175.546791,73.4003726 Z M217.537869,1.34884747e-13 L258.267909,70.5464995 L257.054356,72.6727419 L175.547446,72.66695 L174.341867,70.5788261 L215.111711,1.34884747e-13 L217.537869,1.34884747e-13 Z" id="path-1"></path>
+        <filter x="-5.3%" y="-4.5%" width="110.2%" height="108.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="3" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.00392156863   0 0 0 0 0.00392156863   0 0 0 0 0.00392156863  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2"></feMorphology>
+            <feOffset dx="-4" dy="-4" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0934474779   0 0 0 0 0.0934474779   0 0 0 0 0.0934474779  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Nanoleaf-Info-dark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Lights" transform="translate(54.000000, 19.000000)">
+            <g id="Combined-Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#2E2E2E" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Group-11-Copy-19" transform="translate(174.164098, 151.691311)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy-18" transform="translate(215.937049, 109.573115) rotate(180.000000) translate(-215.937049, -109.573115) translate(173.437049, 73.073115)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy-17" transform="translate(174.164098, 0.000000)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy-16" transform="translate(172.396024, 185.418770) rotate(180.000000) translate(-172.396024, -185.418770) translate(129.896024, 148.918770)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy-15" transform="translate(130.623074, 75.845656)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy" transform="translate(42.500000, 188.191311) rotate(-360.000000) translate(-42.500000, -188.191311) translate(0.000000, 151.691311)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy-3" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy-2" transform="translate(95.706936, 168.851584) rotate(-300.000000) translate(-95.706936, -168.851584) translate(53.206936, 132.351584)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy-4" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy-3" transform="translate(87.082049, 151.691311)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy-5" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+            <g id="Group-11-Copy-5" transform="translate(139.247961, 244.670219) rotate(-300.000000) translate(-139.247961, -244.670219) translate(96.747961, 208.170219)">
+                <polygon id="Polygon" fill="#2E2E2E" points="43.3737707 1.15454509e-14 84.1038112 70.5464995 82.8902583 72.6727419 1.3833477 72.66695 0.177768805 70.5788261 40.9476125 4.98996108e-15"></polygon>
+                <polygon id="Polygon-Copy-2" fill="#444444" points="46.2028283 5.98614015 80.4934994 65.0005467 76.2466496 72.3216047 8.14442072 72.3216047 3.83226009 64.8527234 38.0360088 5.97461686"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

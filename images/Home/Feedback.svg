@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="40px" viewBox="0 0 35 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Resume</title>
+    <defs>
+        <path d="M28.4934498,40 C32.7947598,40 35,37.995086 35,34.0638821 L35,17.2776413 L19.8689956,17.2776413 C17.2270742,17.2776413 15.9825328,16.1572482 15.9825328,13.7788698 L15.9825328,0 L6.50655022,0 C2.20524017,0 0,2.004914 0,5.91646192 L0,34.0638821 C0,38.014742 2.20524017,40 6.50655022,40 L28.4934498,40 Z M34.7598253,14.6830467 C34.628821,13.8771499 33.9956332,13.1105651 32.9912664,12.1867322 L21.6375546,1.78869779 C20.6550218,0.884520885 19.7598253,0.314496314 18.8864629,0.176904177 L18.8864629,13.6412776 C18.8864629,14.3292383 19.2576419,14.6830467 20.0218341,14.6830467 L34.7598253,14.6830467 Z" id="path-1"></path>
+        <filter x="-5.7%" y="-5.0%" width="111.4%" height="110.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="-1" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.154365871   0 0 0 0 0.130829398   0 0 0 0 0.0644993365  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.897521088   0 0 0 0 0.763930583   0 0 0 0 0.38744825  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-238.000000, -913.000000)" fill-rule="nonzero">
+            <g id="Group-4" transform="translate(221.000000, 893.000000)">
+                <g id="Resume" transform="translate(17.000000, 20.000000)">
+                    <use fill="#DEBD60" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

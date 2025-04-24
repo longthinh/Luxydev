@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="33px" viewBox="0 0 34 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Contact</title>
+    <defs>
+        <path d="M41.8230168,57.9164663 C42.9633413,57.9164663 43.7896635,56.9414062 44.3680889,55.4540264 L54.6310096,28.6150841 C54.9119591,27.9044471 55.0606971,27.2764423 55.0606971,26.7475962 C55.0606971,25.6899038 54.4161659,25.0288462 53.3584736,25.0288462 C52.8296274,25.0288462 52.2016226,25.1941106 51.4909856,25.4750601 L24.5198317,35.8040865 C23.1977163,36.2998798 22.1896034,37.1262019 22.1896034,38.2830529 C22.1896034,39.7373798 23.296875,40.2496995 24.8007812,40.7124399 L33.1301082,43.2409856 C34.1547476,43.554988 34.7331731,43.5384615 35.4438101,42.8774038 L52.6808894,26.8137019 C52.8957332,26.6319111 53.1271034,26.6484375 53.2923678,26.8137019 C53.4576322,26.9624399 53.4741587,27.2103365 53.2923678,27.4251803 L37.2782452,44.7118389 C36.6502404,45.3728966 36.6006611,45.9678486 36.9146635,47.0255409 L39.3605769,55.1730769 C39.8398438,56.7430889 40.3521635,57.9164663 41.8230168,57.9164663 Z" id="path-1"></path>
+        <filter x="-4.6%" y="-4.6%" width="109.1%" height="109.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="-1" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.996078431   0 0 0 0 0.470588235   0 0 0 0 0.470588235  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.670588235   0 0 0 0 0.266666667   0 0 0 0 0.266666667  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1023.000000, -918.000000)" fill-rule="nonzero">
+            <g id="Contact" transform="translate(1001.000000, 893.000000)">
+                <use fill="#DE6060" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
