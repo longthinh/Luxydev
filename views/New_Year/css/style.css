@@ -394,3 +394,9 @@ body {
   z-index: 1000;
   border: none;
 }
+@media (max-width: 480px) {
+  #countdown {
+    font-size: 18vw !important;
+    letter-spacing: 0.02em !important;
+  }
+}
