@@ -1,0 +1,13 @@
+
+
+#home-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  border: none;
+}
+

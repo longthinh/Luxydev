@@ -62,6 +62,21 @@
         }
       })();
     </script>
+
+    <script>
+    const SHOW_NEW_YEAR_PAGE = true;
+
+    const url = new URL(location.href);
+
+    // Nếu có ?from=newyear ⇒ KHÔNG redirect nữa
+    if (
+      SHOW_NEW_YEAR_PAGE &&
+      !url.searchParams.has("from")
+    ) {
+      window.location.href = "./views/New_Year/index.html";
+    }
+    </script>
+
   </head>
   <body>
     <div id="___gatsby">

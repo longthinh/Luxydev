@@ -1,0 +1,317 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Happy New Year | Luxydev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" href="../../images/Home/favicon.png">
+
+</head>
+
+<body>
+  <img
+  id="home-icon"
+  src="../../images/Home/Home.png"
+  alt="Home"
+  onclick="window.location.href='../../Index.html?from=newyear'"
+  style="position:fixed;top:18px;left:18px;z-index:10000;cursor:pointer;"
+>
+
+
+  <audio id="bg-music" src="./audio/Happy_New_Year.mp3" preload="auto" loop playsinline></audio>
+  <button id="music-toggle" aria-label="Toggle Music"
+    style="position:fixed;z-index:10000;right:18px;bottom:18px;border:none;background:rgba(0,0,0,0.35);backdrop-filter:saturate(140%) blur(2px);padding:10px;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,0.35);cursor:pointer;">
+    <svg fill="#fff" width="28" height="28">
+      <use href="#icon-sound-off" xlink:href="#icon-sound-off"></use>
+    </svg>
+  </button>
+  <div id="countdown-overlay"
+    style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <div id="countdown"
+       style="font-family:'Orbitron', 'Russo One', monospace;font-size:clamp(60px,20vw,100px);letter-spacing:0.08em;font-weight:700;color:#fff;text-shadow:0 0 30px rgba(255,255,255,0.6);margin-bottom:32px;">
+      23:59:55</div>
+    <div id="countdown-message"
+      style="display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <h1 id="chuc-title"
+        style="font-size:clamp(40px,12vw,100px);margin-bottom:1.5rem;color:#ffd700;text-shadow:0 0 40px rgba(255,215,0,0.9);opacity:0;">
+      </h1>
+      <div id="chuc-lines" style="display:flex;flex-direction:column;gap:0.5em;"></div>
+    </div>
+  </div>
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden;">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-play" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z" />
+      </symbol>
+      <symbol id="icon-pause" viewBox="0 0 24 24">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path
+          d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+      </symbol>
+      <symbol id="icon-settings" viewBox="0 0 24 24">
+        <path
+          d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+      </symbol>
+      <symbol id="icon-sound-on" viewBox="0 0 24 24">
+        <path
+          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+      </symbol>
+      <symbol id="icon-sound-off" viewBox="0 0 24 24">
+        <path
+          d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+      </symbol>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="loading-init">
+      <div class="loading-init__header">Loading</div>
+      <div class="loading-init__status"> </div>
+    </div>
+    <div class="stage-container remove">
+      <div class="canvas-container">
+        <canvas id="trails-canvas"></canvas>
+        <canvas id="main-canvas"></canvas>
+      </div>
+
+      <div class="menu hide">
+        <div class="menu__inner-wrap">
+          <div class="btn btn--bright close-menu-btn">
+            <svg fill="white" width="24" height="24">
+              <use href="#icon-close" xlink:href="#icon-close"></use>
+            </svg>
+          </div>
+          <div class="menu__header">Settings</div>
+          <div class="menu__subheader">For more info, click any label.</div>
+          <form>
+            <div class="form-option form-option--select">
+              <label class="shell-type-label">Shell Type</label>
+              <select class="shell-type"></select>
+            </div>
+            <div class="form-option form-option--select">
+              <label class="shell-size-label">Shell Size</label>
+              <select class="shell-size"></select>
+            </div>
+            <div class="form-option form-option--select">
+              <label class="quality-ui-label">Quality</label>
+              <select class="quality-ui"></select>
+            </div>
+            <div class="form-option form-option--select">
+              <label class="sky-lighting-label">Sky Lighting</label>
+              <select class="sky-lighting"></select>
+            </div>
+            <div class="form-option form-option--select">
+              <label class="scaleFactor-label">Scale</label>
+              <select class="scaleFactor"></select>
+            </div>
+            <div class="form-option form-option--checkbox">
+              <label class="auto-launch-label">Auto Fire</label>
+              <input class="auto-launch" type="checkbox" />
+            </div>
+            <div class="form-option form-option--checkbox form-option--finale-mode">
+              <label class="finale-mode-label">Finale Mode</label>
+              <input class="finale-mode" type="checkbox" />
+            </div>
+            <div class="form-option form-option--checkbox">
+              <label class="hide-controls-label">Hide Controls</label>
+              <input class="hide-controls" type="checkbox" />
+            </div>
+            <div class="form-option form-option--checkbox form-option--fullscreen">
+              <label class="fullscreen-label">Fullscreen</label>
+              <input class="fullscreen" type="checkbox" />
+            </div>
+            <div class="form-option form-option--checkbox">
+              <label class="long-exposure-label">Open Shutter</label>
+              <input class="long-exposure" type="checkbox" />
+            </div>
+          </form>
+          <div class="credits">
+            Passionately built by Caleb Miller.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="help-modal">
+      <div class="help-modal__overlay"></div>
+      <div class="help-modal__dialog">
+        <div class="help-modal__header"></div>
+        <div class="help-modal__body"></div>
+        <button type="button" class="help-modal__close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let timer = null;
+    let animationFrame = null;
+    const countdownEl = document.getElementById("countdown");
+    const overlayEl = document.getElementById("countdown-overlay");
+    // Music setup
+    const bgMusic = document.getElementById('bg-music');
+    const musicToggleBtn = document.getElementById('music-toggle');
+    let isMusicPlaying = false;
+
+    function updateMusicIcon() {
+      const useEl = musicToggleBtn.querySelector('use');
+      if (isMusicPlaying) {
+        useEl.setAttribute('href', '#icon-sound-on');
+        useEl.setAttribute('xlink:href', '#icon-sound-on');
+        musicToggleBtn.style.background = 'rgba(0,128,0,0.45)';
+      } else {
+        useEl.setAttribute('href', '#icon-sound-off');
+        useEl.setAttribute('xlink:href', '#icon-sound-off');
+        musicToggleBtn.style.background = 'rgba(0,0,0,0.35)';
+      }
+    }
+
+    async function playMusic() {
+      try {
+        await bgMusic.play();
+        isMusicPlaying = true;
+        updateMusicIcon();
+      } catch (err) {
+        // If the audio file is missing or cannot play, log a warning.
+        console.warn('Music failed to play. Ensure ./music.mp3 exists.', err);
+      }
+    }
+
+    function pauseMusic() {
+      try {
+        bgMusic.pause();
+      } catch (err) {
+        console.warn('Music failed to pause.', err);
+      }
+      isMusicPlaying = false;
+      updateMusicIcon();
+    }
+
+    // Toggle button handler (does not interfere with other clicks)
+    musicToggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (isMusicPlaying) pauseMusic(); else playMusic();
+    });
+
+    // First user interaction anywhere starts music (browser autoplay policy)
+    function handleFirstUserGesture() {
+      playMusic();
+      document.removeEventListener('click', handleFirstUserGesture);
+    }
+    document.addEventListener('click', handleFirstUserGesture, { once: true });
+    function formatTime(h, m, s) {
+      return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+    function startCountdown() {
+      let steps = [
+        // thoi gian bat dau dem nguoc
+        { h: 23, m: 59, s: 55 },
+        { h: 23, m: 59, s: 56 },
+        { h: 23, m: 59, s: 57 },
+        { h: 23, m: 59, s: 58 },
+        { h: 23, m: 59, s: 59 },
+        { h: 0, m: 0, s: 0 }
+      ];
+      let idx = 0;
+      function applyStep(t) {
+        countdownEl.textContent = formatTime(t.h, t.m, t.s);
+        if (t.h === 0 && t.m === 0 && t.s <= 10 && t.s > 5) {
+          countdownEl.style.color = '#ffd700';
+        } else if (t.h === 0 && t.m === 0 && t.s <= 5 && t.s > 0) {
+          countdownEl.style.color = '#ff0000';
+        } else {
+          countdownEl.style.color = '#fff';
+        }
+      }
+      applyStep(steps[idx]);
+      timer = setInterval(() => {
+        idx++;
+        if (idx < steps.length) {
+          applyStep(steps[idx]);
+        }
+        if (idx === steps.length - 1) {
+          clearInterval(timer);
+          setTimeout(() => {
+            //  Dừng & ẩn countdown
+            countdownEl.style.display = "none";
+            // Đánh dấu countdown đã kết thúc
+            window.isCountdownRunning = false;
+            //  BẮN PHÁO HOA TRƯỚC
+            if (typeof startFireworks === 'function') startFireworks();
+            //  SAU 800ms MỚI HIỆN CHỮ
+            setTimeout(() => {
+              showChucMung();
+            }, 800);
+          }, 1000);
+        }
+      }, 1000);
+    }
+    function showChucMung(fireworkAtOnce) {
+      const messageEl = document.getElementById("countdown-message");
+      const titleEl = document.getElementById("chuc-title");
+      const linesEl = document.getElementById("chuc-lines");
+      const lines = [
+        "HAPPY NEW YEAR 2026",
+        "CHÚC BẠN MỘT NĂM MỚI",
+        "SỨC KHỎE DỒI DÀO",
+        "THÀNH CÔNG RỰC RỠ",
+        "HẠNH PHÚC TRÀN ĐẦY",
+        "AN KHANG THỊNH VƯỢNG",
+        "VẠN SỰ NHƯ Ý",
+        "TIỀN VÔ NHƯ NƯỚC SÔNG ĐÀ",
+        "TIỀN RA NHỎ GIỌT NHƯ CAFFE ĐEN",
+        "MỌI ĐIỀU TỐT ĐẸP SẼ ĐẾN",
+        "GIA ĐÌNH HẠNH PHÚC VIÊN MÃN",
+        "BẠN BÈ LUÔN BÊN CẠNH",
+        "ƯỚC MƠ TRỞ THÀNH HIỆN THỰC",
+        "NIỀM VUI NỐI TIẾP NIỀM VUI",
+        "CHÚC MỘT NĂM MỚI VUI VẺ!"
+      ];
+      linesEl.innerHTML = "";
+      messageEl.style.display = "flex";
+      setTimeout(() => {
+        titleEl.style.opacity = 1;
+        let i = 0;
+        function showLine() {
+          linesEl.innerHTML = "";
+          if (i < lines.length) {
+            const p = document.createElement('p');
+            p.textContent = lines[i];
+            p.style.fontSize = 'clamp(28px,6vw,44px)';
+            p.style.lineHeight = '1.8';
+            p.style.color = '#fff';
+            p.style.textShadow = '0 2px 10px rgba(0,0,0,0.5)';
+            p.style.opacity = 0;
+            p.style.transition = 'opacity 0.7s';
+            p.style.margin = '0 auto';
+            linesEl.appendChild(p);
+            setTimeout(() => { p.style.opacity = 1; }, 100);
+            i++;
+            setTimeout(showLine, 5000);
+          } else {
+            // Khi hiện xong hết, fade overlay đi từ từ
+            overlayEl.style.transition = 'opacity 1.2s';
+            overlayEl.style.opacity = '0';
+            setTimeout(() => { overlayEl.style.display = 'none'; }, 1200);
+          }
+        }
+        showLine();
+      }, 300);
+    }
+
+    window.addEventListener("load", startCountdown);
+  </script>
+  <script src='./js/fscreen.js'></script>
+  <script src="./js/Stage.js"></script>
+  <script src='./js/MyMath.js'></script>
+  <script src='./js/script.js'></script>
+
+</body>
+
+</html>
