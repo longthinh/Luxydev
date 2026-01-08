@@ -64,11 +64,10 @@
     </script>
 
     <script>
-    const SHOW_NEW_YEAR_PAGE = true;
+    const SHOW_NEW_YEAR_PAGE = false;
 
     const url = new URL(location.href);
 
-    // Nếu có ?from=newyear ⇒ KHÔNG redirect nữa
     if (
       SHOW_NEW_YEAR_PAGE &&
       !url.searchParams.has("from")
