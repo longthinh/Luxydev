@@ -27,26 +27,26 @@
     <script>
       (function () {
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+          "(prefers-color-scheme: dark)",
         ).matches;
         const savedMode = localStorage.getItem("color-mode");
         const mode =
           typeof savedMode === "string"
             ? savedMode
             : prefersDark
-            ? "dark"
-            : "light";
+              ? "dark"
+              : "light";
         const root = document.documentElement;
         root.style.setProperty("--initial-color-mode", mode);
         root.style.setProperty(
           "--toggleDistance",
-          mode === "light" ? "27.5px" : "2.5px"
+          mode === "light" ? "27.5px" : "2.5px",
         );
         root.style.setProperty("--sunOpacity", mode === "light" ? "1" : "0");
         root.style.setProperty("--moonOpacity", mode === "light" ? "0" : "1");
         root.style.setProperty(
           "--toggleColor",
-          mode === "light" ? "#EA984E" : "#DEC846"
+          mode === "light" ? "#EA984E" : "#DEC846",
         );
 
         const themeVars = {
@@ -64,18 +64,14 @@
     </script>
 
     <script>
-    const SHOW_NEW_YEAR_PAGE = false;
+      const SHOW_NEW_YEAR_PAGE = true;
 
-    const url = new URL(location.href);
+      const url = new URL(location.href);
 
-    if (
-      SHOW_NEW_YEAR_PAGE &&
-      !url.searchParams.has("from")
-    ) {
-      window.location.href = "./views/New_Year/index.html";
-    }
+      if (SHOW_NEW_YEAR_PAGE && !url.searchParams.has("from")) {
+        window.location.href = "./views/New_Year/index.html";
+      }
     </script>
-
   </head>
   <body>
     <div id="___gatsby">
@@ -160,7 +156,9 @@
 
                   .glow-github:hover {
                     color: #cc33ff;
-                    text-shadow: 0 0 8px #cc33ff, 0 0 16px #cc33ff;
+                    text-shadow:
+                      0 0 8px #cc33ff,
+                      0 0 16px #cc33ff;
                   }
                 </style>
 
@@ -188,7 +186,9 @@
 
                   .glow-linkedin:hover {
                     color: #0cabd3;
-                    text-shadow: 0 0 8px #0cabd3, 0 0 16px #0cabd3;
+                    text-shadow:
+                      0 0 8px #0cabd3,
+                      0 0 16px #0cabd3;
                   }
                 </style>
                 <p
@@ -246,7 +246,9 @@
 
                   .glow-feedback:hover {
                     color: #ead58f;
-                    text-shadow: 0 0 8px #ead58f, 0 0 16px #ead58f;
+                    text-shadow:
+                      0 0 8px #ead58f,
+                      0 0 16px #ead58f;
                   }
                 </style>
                 <p
@@ -279,7 +281,14 @@
               <p>
                 <code>I'm</code>
                 <p2
-                  ><code><a href="https://t.me/longthinh" class="author-longthinh" style="color: white;">@longthinh</a></code>
+                  ><code
+                    ><a
+                      href="https://t.me/longthinh"
+                      class="author-longthinh"
+                      style="color: white"
+                      >@longthinh</a
+                    ></code
+                  >
                   <span class="Hero-module--lastName--2zATJ">
                     <img
                       src="./images/Home/Verify.png"
@@ -290,15 +299,18 @@
                         vertical-align: middle;
                         margin-bottom: 3px;
                       " /></span
-                  ><br />
-                </p2><code>
-                Beyond my passion for learning, I have a strong interest in
-                exploring technology and design. I'm constantly fascinated by
-                how technology can enhance our lives. Whether it's through
-                seeking creative solutions or discovering cutting-edge
-                innovations, I'm always eager to learn and push my own limits.</code>
-                <br /><br /><code><span style="font-weight: 700">Sincerely</span
-                ></code><br />
+                  ><br /> </p2
+                ><code>
+                  Beyond my passion for learning, I have a strong interest in
+                  exploring technology and design. I'm constantly fascinated by
+                  how technology can enhance our lives. Whether it's through
+                  seeking creative solutions or discovering cutting-edge
+                  innovations, I'm always eager to learn and push my own
+                  limits.</code
+                >
+                <br /><br /><code
+                  ><span style="font-weight: 700">Sincerely</span></code
+                ><br />
               </p>
             </div>
             <object
@@ -348,7 +360,9 @@
 
                   .glow-share2,
                   .glow-get {
-                    transition: text-shadow 0.3s ease, color 0.3s ease;
+                    transition:
+                      text-shadow 0.3s ease,
+                      color 0.3s ease;
                   }
 
                   .glow-share2 {
@@ -361,13 +375,16 @@
 
                   .glow-link:hover .glow-share2 {
                     color: #f0f0f0;
-                    text-shadow: 0 0 10px var(--offsetTextColor),
+                    text-shadow:
+                      0 0 10px var(--offsetTextColor),
                       0 0 20px var(--offsetTextColor);
                   }
 
                   .glow-link:hover .glow-get {
                     color: #07d36a;
-                    text-shadow: 0 0 8px #07d36a, 0 0 12px #07d36a;
+                    text-shadow:
+                      0 0 8px #07d36a,
+                      0 0 12px #07d36a;
                   }
                 </style>
 
@@ -395,12 +412,15 @@
                 <style>
                   .author-longthinh {
                     color: var(--offsetTextColor) !important;
-                    transition: color 0.3s ease, text-shadow 0.3s ease;
+                    transition:
+                      color 0.3s ease,
+                      text-shadow 0.3s ease;
                   }
 
                   .author-longthinh:hover {
                     color: var(--offsetTextColor) !important;
-                    text-shadow: 0 0 10px var(--offsetTextColor),
+                    text-shadow:
+                      0 0 10px var(--offsetTextColor),
                       0 0 20px var(--offsetTextColor);
                   }
                 </style>
@@ -458,13 +478,17 @@
                   .glow-fiddler {
                     text-decoration: none;
                     color: #2cb144;
-                    transition: text-shadow 0.3s ease, color 0.3s ease;
+                    transition:
+                      text-shadow 0.3s ease,
+                      color 0.3s ease;
                   }
 
                   .glow-fiddler:hover,
                   .glow-fiddler:focus,
                   .glow-fiddler:active {
-                    text-shadow: 0 0 8px #3df15d, 0 0 12px #3df15d;
+                    text-shadow:
+                      0 0 8px #3df15d,
+                      0 0 12px #3df15d;
                     color: #3df15d;
                   }
                 </style>
@@ -484,12 +508,15 @@
                 <style>
                   .author-longthinh {
                     color: var(--offsetTextColor) !important;
-                    transition: color 0.3s ease, text-shadow 0.3s ease;
+                    transition:
+                      color 0.3s ease,
+                      text-shadow 0.3s ease;
                   }
 
                   .author-longthinh:hover {
                     color: var(--offsetTextColor) !important;
-                    text-shadow: 0 0 10px var(--offsetTextColor),
+                    text-shadow:
+                      0 0 10px var(--offsetTextColor),
                       0 0 20px var(--offsetTextColor);
                   }
                 </style>
@@ -537,13 +564,17 @@
                   .glow-ttjb {
                     text-decoration: none;
                     color: #ff6201;
-                    transition: text-shadow 0.3s ease, color 0.3s ease;
+                    transition:
+                      text-shadow 0.3s ease,
+                      color 0.3s ease;
                   }
 
                   .glow-ttjb:hover,
                   .glow-ttjb:focus,
                   .glow-ttjb:active {
-                    text-shadow: 0 0 8px #ff6201, 0 0 12px #ff812f;
+                    text-shadow:
+                      0 0 8px #ff6201,
+                      0 0 12px #ff812f;
                     color: #ff812f;
                   }
                 </style>
@@ -570,12 +601,15 @@
                 <style>
                   .author-caoduyanh {
                     color: var(--offsetTextColor) !important;
-                    transition: color 0.3s ease, text-shadow 0.3s ease;
+                    transition:
+                      color 0.3s ease,
+                      text-shadow 0.3s ease;
                   }
 
                   .author-caoduyanh:hover {
                     color: var(--offsetTextColor) !important;
-                    text-shadow: 0 0 10px var(--offsetTextColor),
+                    text-shadow:
+                      0 0 10px var(--offsetTextColor),
                       0 0 20px var(--offsetTextColor);
                   }
                 </style>
@@ -633,13 +667,16 @@
                   .glow-tips {
                     text-decoration: none;
                     color: var(--primaryTextColor) !important;
-                    transition: text-shadow 0.3s ease, color 0.3s ease;
+                    transition:
+                      text-shadow 0.3s ease,
+                      color 0.3s ease;
                   }
 
                   .glow-tips:hover,
                   .glow-tips:focus,
                   .glow-tips:active {
-                    text-shadow: 0 0 8px var(--offsetTextColor),
+                    text-shadow:
+                      0 0 8px var(--offsetTextColor),
                       0 0 12px var(--offsetTextColor);
                     color: var(--offsetTextColor);
                   }
@@ -658,12 +695,15 @@
                 <style>
                   .author-tutorial {
                     color: var(--offsetTextColor) !important;
-                    transition: color 0.3s ease, text-shadow 0.3s ease;
+                    transition:
+                      color 0.3s ease,
+                      text-shadow 0.3s ease;
                   }
 
                   .author-tutorial:hover {
                     color: var(--offsetTextColor) !important;
-                    text-shadow: 0 0 10px var(--offsetTextColor),
+                    text-shadow:
+                      0 0 10px var(--offsetTextColor),
                       0 0 20px var(--offsetTextColor);
                   }
                 </style>
